@@ -1,0 +1,323 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8A5D6CA413A9A44F003638D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A5D6CA313A9A44F003638D5 /* UIKit.framework */; };
+		8A5D6CA613A9A44F003638D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A5D6CA513A9A44F003638D5 /* Foundation.framework */; };
+		8A5D6CA813A9A44F003638D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A5D6CA713A9A44F003638D5 /* CoreGraphics.framework */; };
+		8A5D6CAE13A9A44F003638D5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A5D6CAC13A9A44F003638D5 /* InfoPlist.strings */; };
+		8A5D6CB113A9A44F003638D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D6CB013A9A44F003638D5 /* main.m */; };
+		8A5D6CB413A9A44F003638D5 /* iGestaltAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D6CB313A9A44F003638D5 /* iGestaltAppDelegate.m */; };
+		8A5D6CB813A9A44F003638D5 /* iGestaltAppDelegate_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D6CB713A9A44F003638D5 /* iGestaltAppDelegate_iPhone.m */; };
+		8A5D6CBB13A9A44F003638D5 /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A5D6CB913A9A44F003638D5 /* MainWindow_iPhone.xib */; };
+		8A5D6CBF13A9A44F003638D5 /* iGestaltAppDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D6CBE13A9A44F003638D5 /* iGestaltAppDelegate_iPad.m */; };
+		8A5D6CC213A9A44F003638D5 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A5D6CC013A9A44F003638D5 /* MainWindow_iPad.xib */; };
+		8A5D6CD213A9AEA8003638D5 /* iOSGestalt.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D6CD113A9AEA8003638D5 /* iOSGestalt.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8A5D6C9F13A9A44F003638D5 /* iGestalt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iGestalt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A5D6CA313A9A44F003638D5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8A5D6CA513A9A44F003638D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8A5D6CA713A9A44F003638D5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8A5D6CAB13A9A44F003638D5 /* iGestalt-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iGestalt-Info.plist"; sourceTree = "<group>"; };
+		8A5D6CAD13A9A44F003638D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8A5D6CAF13A9A44F003638D5 /* iGestalt-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iGestalt-Prefix.pch"; sourceTree = "<group>"; };
+		8A5D6CB013A9A44F003638D5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8A5D6CB213A9A44F003638D5 /* iGestaltAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iGestaltAppDelegate.h; sourceTree = "<group>"; };
+		8A5D6CB313A9A44F003638D5 /* iGestaltAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iGestaltAppDelegate.m; sourceTree = "<group>"; };
+		8A5D6CB613A9A44F003638D5 /* iGestaltAppDelegate_iPhone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = iGestaltAppDelegate_iPhone.h; path = iPhone/iGestaltAppDelegate_iPhone.h; sourceTree = "<group>"; };
+		8A5D6CB713A9A44F003638D5 /* iGestaltAppDelegate_iPhone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = iGestaltAppDelegate_iPhone.m; path = iPhone/iGestaltAppDelegate_iPhone.m; sourceTree = "<group>"; };
+		8A5D6CBA13A9A44F003638D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPhone/en.lproj/MainWindow_iPhone.xib; sourceTree = "<group>"; };
+		8A5D6CBD13A9A44F003638D5 /* iGestaltAppDelegate_iPad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = iGestaltAppDelegate_iPad.h; path = iPad/iGestaltAppDelegate_iPad.h; sourceTree = "<group>"; };
+		8A5D6CBE13A9A44F003638D5 /* iGestaltAppDelegate_iPad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = iGestaltAppDelegate_iPad.m; path = iPad/iGestaltAppDelegate_iPad.m; sourceTree = "<group>"; };
+		8A5D6CC113A9A44F003638D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPad/en.lproj/MainWindow_iPad.xib; sourceTree = "<group>"; };
+		8A5D6CD013A9AEA8003638D5 /* iOSGestalt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOSGestalt.h; sourceTree = "<group>"; };
+		8A5D6CD113A9AEA8003638D5 /* iOSGestalt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iOSGestalt.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A5D6C9C13A9A44F003638D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A5D6CA413A9A44F003638D5 /* UIKit.framework in Frameworks */,
+				8A5D6CA613A9A44F003638D5 /* Foundation.framework in Frameworks */,
+				8A5D6CA813A9A44F003638D5 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8A5D6C9413A9A44F003638D5 = {
+			isa = PBXGroup;
+			children = (
+				8A5D6CA913A9A44F003638D5 /* iGestalt */,
+				8A5D6CA213A9A44F003638D5 /* Frameworks */,
+				8A5D6CA013A9A44F003638D5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8A5D6CA013A9A44F003638D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A5D6C9F13A9A44F003638D5 /* iGestalt.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A5D6CA213A9A44F003638D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A5D6CA313A9A44F003638D5 /* UIKit.framework */,
+				8A5D6CA513A9A44F003638D5 /* Foundation.framework */,
+				8A5D6CA713A9A44F003638D5 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A5D6CA913A9A44F003638D5 /* iGestalt */ = {
+			isa = PBXGroup;
+			children = (
+				8A5D6CB213A9A44F003638D5 /* iGestaltAppDelegate.h */,
+				8A5D6CB313A9A44F003638D5 /* iGestaltAppDelegate.m */,
+				8A5D6CCF13A9AEA8003638D5 /* common */,
+				8A5D6CB513A9A44F003638D5 /* iPhone */,
+				8A5D6CBC13A9A44F003638D5 /* iPad */,
+				8A5D6CAA13A9A44F003638D5 /* Supporting Files */,
+			);
+			path = iGestalt;
+			sourceTree = "<group>";
+		};
+		8A5D6CAA13A9A44F003638D5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8A5D6CAB13A9A44F003638D5 /* iGestalt-Info.plist */,
+				8A5D6CAC13A9A44F003638D5 /* InfoPlist.strings */,
+				8A5D6CAF13A9A44F003638D5 /* iGestalt-Prefix.pch */,
+				8A5D6CB013A9A44F003638D5 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8A5D6CB513A9A44F003638D5 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				8A5D6CB613A9A44F003638D5 /* iGestaltAppDelegate_iPhone.h */,
+				8A5D6CB713A9A44F003638D5 /* iGestaltAppDelegate_iPhone.m */,
+				8A5D6CB913A9A44F003638D5 /* MainWindow_iPhone.xib */,
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
+		8A5D6CBC13A9A44F003638D5 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				8A5D6CBD13A9A44F003638D5 /* iGestaltAppDelegate_iPad.h */,
+				8A5D6CBE13A9A44F003638D5 /* iGestaltAppDelegate_iPad.m */,
+				8A5D6CC013A9A44F003638D5 /* MainWindow_iPad.xib */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		8A5D6CCF13A9AEA8003638D5 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				8A5D6CD013A9AEA8003638D5 /* iOSGestalt.h */,
+				8A5D6CD113A9AEA8003638D5 /* iOSGestalt.m */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8A5D6C9E13A9A44F003638D5 /* iGestalt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A5D6CC513A9A44F003638D5 /* Build configuration list for PBXNativeTarget "iGestalt" */;
+			buildPhases = (
+				8A5D6C9B13A9A44F003638D5 /* Sources */,
+				8A5D6C9C13A9A44F003638D5 /* Frameworks */,
+				8A5D6C9D13A9A44F003638D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iGestalt;
+			productName = iGestalt;
+			productReference = 8A5D6C9F13A9A44F003638D5 /* iGestalt.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8A5D6C9613A9A44F003638D5 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 8A5D6C9913A9A44F003638D5 /* Build configuration list for PBXProject "iGestalt" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8A5D6C9413A9A44F003638D5;
+			productRefGroup = 8A5D6CA013A9A44F003638D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8A5D6C9E13A9A44F003638D5 /* iGestalt */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8A5D6C9D13A9A44F003638D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A5D6CAE13A9A44F003638D5 /* InfoPlist.strings in Resources */,
+				8A5D6CBB13A9A44F003638D5 /* MainWindow_iPhone.xib in Resources */,
+				8A5D6CC213A9A44F003638D5 /* MainWindow_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A5D6C9B13A9A44F003638D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A5D6CB113A9A44F003638D5 /* main.m in Sources */,
+				8A5D6CB413A9A44F003638D5 /* iGestaltAppDelegate.m in Sources */,
+				8A5D6CB813A9A44F003638D5 /* iGestaltAppDelegate_iPhone.m in Sources */,
+				8A5D6CBF13A9A44F003638D5 /* iGestaltAppDelegate_iPad.m in Sources */,
+				8A5D6CD213A9AEA8003638D5 /* iOSGestalt.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8A5D6CAC13A9A44F003638D5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A5D6CAD13A9A44F003638D5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8A5D6CB913A9A44F003638D5 /* MainWindow_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A5D6CBA13A9A44F003638D5 /* en */,
+			);
+			name = MainWindow_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		8A5D6CC013A9A44F003638D5 /* MainWindow_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A5D6CC113A9A44F003638D5 /* en */,
+			);
+			name = MainWindow_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8A5D6CC313A9A44F003638D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8A5D6CC413A9A44F003638D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8A5D6CC613A9A44F003638D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iGestalt/iGestalt-Prefix.pch";
+				INFOPLIST_FILE = "iGestalt/iGestalt-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8A5D6CC713A9A44F003638D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iGestalt/iGestalt-Prefix.pch";
+				INFOPLIST_FILE = "iGestalt/iGestalt-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A5D6C9913A9A44F003638D5 /* Build configuration list for PBXProject "iGestalt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A5D6CC313A9A44F003638D5 /* Debug */,
+				8A5D6CC413A9A44F003638D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A5D6CC513A9A44F003638D5 /* Build configuration list for PBXNativeTarget "iGestalt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A5D6CC613A9A44F003638D5 /* Debug */,
+				8A5D6CC713A9A44F003638D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8A5D6C9613A9A44F003638D5 /* Project object */;
+}
