@@ -10,7 +10,9 @@
 #import "iGestaltAppDelegate.h"
 
 @interface iGestaltAppDelegate_iPhone : iGestaltAppDelegate {
-    
+	UINavigationController	*__navigationController;
 }
+
+@property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
 
 @end

@@ -10,9 +10,22 @@
 
 @implementation iGestaltAppDelegate_iPhone
 
+@synthesize navigationController	= __navigationController;
+
+
 - (void)dealloc
 {
+	[__navigationController release];
+
 	[super dealloc];
 }
+
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+	[self.window addSubview:self.navigationController.view];
+	return [super application:application didFinishLaunchingWithOptions:launchOptions];
+}
+
 
 @end

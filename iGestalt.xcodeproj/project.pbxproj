@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A4D47AC13AAEEF800D02590 /* GroupSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D47AA13AAEEF800D02590 /* GroupSelectViewController.m */; };
+		8A4D47AD13AAEEF800D02590 /* GroupSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A4D47AB13AAEEF800D02590 /* GroupSelectViewController.xib */; };
+		8A4D47BA13AB0F5E00D02590 /* DeviceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D47B813AB0F5E00D02590 /* DeviceDetailViewController.m */; };
+		8A4D47BB13AB0F5E00D02590 /* DeviceDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A4D47B913AB0F5E00D02590 /* DeviceDetailViewController.xib */; };
+		8A4D47C013AB0F7900D02590 /* MemoryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D47BE13AB0F7800D02590 /* MemoryDetailViewController.m */; };
+		8A4D47C113AB0F7900D02590 /* MemoryDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A4D47BF13AB0F7900D02590 /* MemoryDetailViewController.xib */; };
 		8A5D6CA413A9A44F003638D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A5D6CA313A9A44F003638D5 /* UIKit.framework */; };
 		8A5D6CA613A9A44F003638D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A5D6CA513A9A44F003638D5 /* Foundation.framework */; };
 		8A5D6CA813A9A44F003638D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A5D6CA713A9A44F003638D5 /* CoreGraphics.framework */; };
@@ -21,6 +27,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A4D47A913AAEEF800D02590 /* GroupSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupSelectViewController.h; sourceTree = "<group>"; };
+		8A4D47AA13AAEEF800D02590 /* GroupSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupSelectViewController.m; sourceTree = "<group>"; };
+		8A4D47AB13AAEEF800D02590 /* GroupSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupSelectViewController.xib; sourceTree = "<group>"; };
+		8A4D47B713AB0F5E00D02590 /* DeviceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeviceDetailViewController.h; path = ../../../../../../../Users/kobayasi/src/repo/iGestalt/iGestalt/common/DeviceDetailViewController.h; sourceTree = "<group>"; };
+		8A4D47B813AB0F5E00D02590 /* DeviceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeviceDetailViewController.m; path = ../../../../../../../Users/kobayasi/src/repo/iGestalt/iGestalt/common/DeviceDetailViewController.m; sourceTree = "<group>"; };
+		8A4D47B913AB0F5E00D02590 /* DeviceDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DeviceDetailViewController.xib; path = ../../../../../../../Users/kobayasi/src/repo/iGestalt/iGestalt/common/DeviceDetailViewController.xib; sourceTree = "<group>"; };
+		8A4D47BD13AB0F7800D02590 /* MemoryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MemoryDetailViewController.h; path = ../../../../../../../Users/kobayasi/src/repo/iGestalt/iGestalt/common/MemoryDetailViewController.h; sourceTree = "<group>"; };
+		8A4D47BE13AB0F7800D02590 /* MemoryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MemoryDetailViewController.m; path = ../../../../../../../Users/kobayasi/src/repo/iGestalt/iGestalt/common/MemoryDetailViewController.m; sourceTree = "<group>"; };
+		8A4D47BF13AB0F7900D02590 /* MemoryDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MemoryDetailViewController.xib; path = ../../../../../../../Users/kobayasi/src/repo/iGestalt/iGestalt/common/MemoryDetailViewController.xib; sourceTree = "<group>"; };
 		8A5D6C9F13A9A44F003638D5 /* iGestalt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iGestalt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A5D6CA313A9A44F003638D5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8A5D6CA513A9A44F003638D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -131,6 +146,15 @@
 			children = (
 				8A5D6CD013A9AEA8003638D5 /* iOSGestalt.h */,
 				8A5D6CD113A9AEA8003638D5 /* iOSGestalt.m */,
+				8A4D47A913AAEEF800D02590 /* GroupSelectViewController.h */,
+				8A4D47AA13AAEEF800D02590 /* GroupSelectViewController.m */,
+				8A4D47AB13AAEEF800D02590 /* GroupSelectViewController.xib */,
+				8A4D47B713AB0F5E00D02590 /* DeviceDetailViewController.h */,
+				8A4D47B813AB0F5E00D02590 /* DeviceDetailViewController.m */,
+				8A4D47B913AB0F5E00D02590 /* DeviceDetailViewController.xib */,
+				8A4D47BD13AB0F7800D02590 /* MemoryDetailViewController.h */,
+				8A4D47BE13AB0F7800D02590 /* MemoryDetailViewController.m */,
+				8A4D47BF13AB0F7900D02590 /* MemoryDetailViewController.xib */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -185,6 +209,9 @@
 				8A5D6CAE13A9A44F003638D5 /* InfoPlist.strings in Resources */,
 				8A5D6CBB13A9A44F003638D5 /* MainWindow_iPhone.xib in Resources */,
 				8A5D6CC213A9A44F003638D5 /* MainWindow_iPad.xib in Resources */,
+				8A4D47AD13AAEEF800D02590 /* GroupSelectViewController.xib in Resources */,
+				8A4D47BB13AB0F5E00D02590 /* DeviceDetailViewController.xib in Resources */,
+				8A4D47C113AB0F7900D02590 /* MemoryDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +227,9 @@
 				8A5D6CB813A9A44F003638D5 /* iGestaltAppDelegate_iPhone.m in Sources */,
 				8A5D6CBF13A9A44F003638D5 /* iGestaltAppDelegate_iPad.m in Sources */,
 				8A5D6CD213A9AEA8003638D5 /* iOSGestalt.m in Sources */,
+				8A4D47AC13AAEEF800D02590 /* GroupSelectViewController.m in Sources */,
+				8A4D47BA13AB0F5E00D02590 /* DeviceDetailViewController.m in Sources */,
+				8A4D47C013AB0F7900D02590 /* MemoryDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +346,7 @@
 				8A5D6CC713A9A44F003638D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

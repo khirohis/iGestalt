@@ -12,8 +12,9 @@
 @interface iOSGestalt : NSObject {
 }
 
-- (BOOL)resetVmstat;
 - (unsigned int)pageSize;
+
+- (BOOL)resetVmstat;
 - (unsigned int)vmstatTotal;
 - (unsigned int)vmstatWired;
 - (unsigned int)vmstatActive;

@@ -24,16 +24,6 @@ static vm_statistics_data_t	sVmstat;
 @implementation iOSGestalt
 
 
-- (BOOL)resetVmstat
-{
-	mach_msg_type_number_t count = HOST_VM_INFO_COUNT;
-	if (host_statistics(mach_host_self(), HOST_VM_INFO, (host_info_t)&sVmstat, &count) == KERN_SUCCESS) {
-		return YES;
-	}
-
-	return NO;
-}
-
 - (unsigned int)pageSize
 {
 	unsigned int result;
@@ -42,6 +32,17 @@ static vm_statistics_data_t	sVmstat;
 	}
 
 	return 0;
+}
+
+
+- (BOOL)resetVmstat
+{
+	mach_msg_type_number_t count = HOST_VM_INFO_COUNT;
+	if (host_statistics(mach_host_self(), HOST_VM_INFO, (host_info_t)&sVmstat, &count) == KERN_SUCCESS) {
+		return YES;
+	}
+
+	return NO;
 }
 
 - (unsigned int)vmstatTotal
