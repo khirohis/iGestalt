@@ -30,36 +30,61 @@ enum {
 	kSectionMemoryInfoMax
 };
 
+enum {
+	kAllocOnceLength			= 1024 * 1024
+};
+
 
 @interface MemoryDetailViewController ()
+
+@property (nonatomic, assign) BOOL				receivedWarning;
+@property (nonatomic, assign) NSInteger			receiveCount;
+
+@property (nonatomic, retain) NSMutableArray	*allocPool;
+
+- (void)resetInfo;
 
 - (UITableViewCell *)memoryInfoSectionCell:(NSInteger)row;
 - (UITableViewCell *)allocTestSectionCell:(NSInteger)row;
 - (NSDictionary *)memoryInfoDictionary:(NSInteger)index;
+
+- (void)allocateOnce:(id)obj;
 
 @end
 
 
 @implementation MemoryDetailViewController
 
+@synthesize receivedWarning		= __receivedWarning;
+@synthesize receiveCount		= __recieveCount;
+
+@synthesize allocPool			= __allocPool;
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
     }
+
     return self;
 }
 
 - (void)dealloc
 {
+	[__allocPool release];
+
     [super dealloc];
 }
+
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+
+	self.receivedWarning = YES;
+	self.receiveCount++;
+	self.allocPool = nil;
 }
 
 
@@ -78,6 +103,8 @@ enum {
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+
+	[self resetInfo];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -155,10 +182,27 @@ enum {
 - (void)tableView:(UITableView *)tableView
  didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+	switch (indexPath.section) {
+		case kSectionAllocTest:
+			[self performSelector:@selector(allocateOnce:) withObject:nil afterDelay:0.0];
+			break;
+			
+		default:
+			break;
+	}
 }
 
 
 #pragma mark - private methods
+
+- (void)resetInfo
+{
+	iOSGestalt *gestalt = [[[iOSGestalt alloc] init] autorelease];
+	[gestalt resetVmstat];
+	
+	[self.tableView reloadData];
+}
+
 
 - (UITableViewCell *)memoryInfoSectionCell:(NSInteger)row
 {
@@ -184,7 +228,7 @@ enum {
 	UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
 	if (cell == nil) {
 		cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-		//cell.textLabel.textAlignment = 
+		cell.textLabel.textAlignment = UITextAlignmentCenter;
 	}
 
 	cell.textLabel.text = @"Allocation Test";
@@ -198,7 +242,6 @@ enum {
 	NSString *value = @"";
 
 	iOSGestalt *gestalt = [[[iOSGestalt alloc] init] autorelease];
-	[gestalt resetVmstat];
 
 	switch (index) {
 
@@ -250,6 +293,30 @@ enum {
 			title, @"title",
 			value, @"value",
 			nil];
+}
+
+
+- (void)allocateOnce:(id)obj
+{
+	if (self.receivedWarning) {
+		[self resetInfo];
+		self.receivedWarning = NO;
+		return;
+	}
+
+	if (self.allocPool == nil) {
+		self.allocPool = [NSMutableArray array];
+	}
+
+	NSData *data = [NSMutableData dataWithCapacity:kAllocOnceLength];
+	if (data == nil) {
+		[self resetInfo];
+		return;
+	}
+
+	[self.allocPool addObject:data];
+
+	[self performSelector:@selector(allocateOnce:) withObject:nil afterDelay:0.0];
 }
 
 

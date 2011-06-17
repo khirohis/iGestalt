@@ -10,7 +10,10 @@
 
 
 @interface MemoryDetailViewController : UITableViewController {
-    
+	BOOL			__receivedWarning;
+	NSInteger		__recieveCount;
+
+	NSMutableArray	*__allocPool;
 }
 
 @end
