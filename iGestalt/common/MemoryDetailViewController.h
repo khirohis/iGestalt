@@ -13,11 +13,6 @@
 
 @interface MemoryDetailViewController : UITableViewController {
 	iOSGestalt		*__gestalt;
-
-	BOOL			__receivedWarning;
-	NSInteger		__recieveCount;
-
-	NSMutableArray	*__allocPool;
 }
 
 @end

@@ -40,11 +40,6 @@ enum {
 
 @property (nonatomic, retain) iOSGestalt		*gestalt;
 
-@property (nonatomic, assign) BOOL				receivedWarning;
-@property (nonatomic, assign) NSInteger			receiveCount;
-
-@property (nonatomic, retain) NSMutableArray	*allocPool;
-
 - (void)resetInfo;
 
 - (UITableViewCell *)memoryInfoSectionCell:(NSInteger)row;
@@ -60,11 +55,6 @@ enum {
 
 @synthesize gestalt				= __gestalt;
 
-@synthesize receivedWarning		= __receivedWarning;
-@synthesize receiveCount		= __recieveCount;
-
-@synthesize allocPool			= __allocPool;
-
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -78,7 +68,6 @@ enum {
 - (void)dealloc
 {
 	[__gestalt release];
-	[__allocPool release];
 
     [super dealloc];
 }
@@ -88,6 +77,7 @@ enum {
 {
 	if (__gestalt == nil) {
 		__gestalt = [[iOSGestalt alloc] init];
+		[self.gestalt resetVmstat];
 	}
 
 	return __gestalt;
@@ -98,9 +88,7 @@ enum {
 {
     [super didReceiveMemoryWarning];
 
-	self.receivedWarning = YES;
-	self.receiveCount++;
-	self.allocPool = nil;
+	NSLog(@"didReceiveMemoryWarning");
 }
 
 
@@ -313,25 +301,13 @@ enum {
 
 - (void)allocateOnce:(id)obj
 {
-	if (self.receivedWarning) {
-		[self resetInfo];
-		self.receivedWarning = NO;
-		return;
-	}
+	unsigned int freeMemory = [self.gestalt vmstatFree] * [self.gestalt pageSize];
+	void *memblock = (char *)malloc(freeMemory);
+	memset(memblock, 0, freeMemory);
+	free(memblock);
+	[self resetInfo];
 
-	if (self.allocPool == nil) {
-		self.allocPool = [NSMutableArray array];
-	}
-
-	NSData *data = [NSMutableData dataWithCapacity:kAllocOnceLength];
-	if (data == nil) {
-		[self resetInfo];
-		return;
-	}
-
-	[self.allocPool addObject:data];
-
-	[self performSelector:@selector(allocateOnce:) withObject:nil afterDelay:0.0];
+	//[self performSelector:@selector(allocateOnce:) withObject:nil afterDelay:0.0];
 }
 
 
