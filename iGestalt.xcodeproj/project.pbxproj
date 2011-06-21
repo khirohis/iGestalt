@@ -20,6 +20,7 @@
 		8A5D6CBF13A9A44F003638D5 /* iGestaltAppDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D6CBE13A9A44F003638D5 /* iGestaltAppDelegate_iPad.m */; };
 		8A5D6CC213A9A44F003638D5 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A5D6CC013A9A44F003638D5 /* MainWindow_iPad.xib */; };
 		8A5D6CD213A9AEA8003638D5 /* iOSGestalt.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A5D6CD113A9AEA8003638D5 /* iOSGestalt.m */; };
+		8AF573F513B086D500FB3A3D /* AppUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF573F413B086D500FB3A3D /* AppUtils.m */; };
 		A1B5480A13ABC038007ABE06 /* DeviceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B5480813ABC038007ABE06 /* DeviceDetailViewController.m */; };
 		A1B5480B13ABC038007ABE06 /* DeviceDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1B5480913ABC038007ABE06 /* DeviceDetailViewController.xib */; };
 		A1B5481013ABC04E007ABE06 /* MemoryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B5480E13ABC04E007ABE06 /* MemoryDetailViewController.m */; };
@@ -48,6 +49,8 @@
 		8A5D6CC113A9A44F003638D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPad/en.lproj/MainWindow_iPad.xib; sourceTree = "<group>"; };
 		8A5D6CD013A9AEA8003638D5 /* iOSGestalt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOSGestalt.h; sourceTree = "<group>"; };
 		8A5D6CD113A9AEA8003638D5 /* iOSGestalt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iOSGestalt.m; sourceTree = "<group>"; };
+		8AF573F313B086D500FB3A3D /* AppUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppUtils.h; path = ../../../../../../../Users/kobayasi/src/repo/iGestalt/iGestalt/common/AppUtils.h; sourceTree = "<group>"; };
+		8AF573F413B086D500FB3A3D /* AppUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppUtils.m; path = ../../../../../../../Users/kobayasi/src/repo/iGestalt/iGestalt/common/AppUtils.m; sourceTree = "<group>"; };
 		A1B5480713ABC038007ABE06 /* DeviceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceDetailViewController.h; sourceTree = "<group>"; };
 		A1B5480813ABC038007ABE06 /* DeviceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceDetailViewController.m; sourceTree = "<group>"; };
 		A1B5480913ABC038007ABE06 /* DeviceDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeviceDetailViewController.xib; sourceTree = "<group>"; };
@@ -155,6 +158,8 @@
 				A1B5480D13ABC04E007ABE06 /* MemoryDetailViewController.h */,
 				A1B5480E13ABC04E007ABE06 /* MemoryDetailViewController.m */,
 				A1B5480F13ABC04E007ABE06 /* MemoryDetailViewController.xib */,
+				8AF573F313B086D500FB3A3D /* AppUtils.h */,
+				8AF573F413B086D500FB3A3D /* AppUtils.m */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -230,6 +235,7 @@
 				8A4D47AC13AAEEF800D02590 /* GroupSelectViewController.m in Sources */,
 				A1B5480A13ABC038007ABE06 /* DeviceDetailViewController.m in Sources */,
 				A1B5481013ABC04E007ABE06 /* MemoryDetailViewController.m in Sources */,
+				8AF573F513B086D500FB3A3D /* AppUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

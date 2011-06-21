@@ -9,7 +9,11 @@
 #import <UIKit/UIKit.h>
 
 
+@class iOSGestalt;
+
 @interface MemoryDetailViewController : UITableViewController {
+	iOSGestalt		*__gestalt;
+
 	BOOL			__receivedWarning;
 	NSInteger		__recieveCount;
 
