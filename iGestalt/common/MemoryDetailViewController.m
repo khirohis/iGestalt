@@ -8,6 +8,7 @@
 
 #import "MemoryDetailViewController.h"
 #import "iOSGestalt.h"
+#import "AppUtils.h"
 
 
 enum {
@@ -37,6 +38,8 @@ enum {
 
 @interface MemoryDetailViewController ()
 
+@property (nonatomic, retain) iOSGestalt		*gestalt;
+
 @property (nonatomic, assign) BOOL				receivedWarning;
 @property (nonatomic, assign) NSInteger			receiveCount;
 
@@ -55,6 +58,8 @@ enum {
 
 @implementation MemoryDetailViewController
 
+@synthesize gestalt				= __gestalt;
+
 @synthesize receivedWarning		= __receivedWarning;
 @synthesize receiveCount		= __recieveCount;
 
@@ -72,9 +77,20 @@ enum {
 
 - (void)dealloc
 {
+	[__gestalt release];
 	[__allocPool release];
 
     [super dealloc];
+}
+
+
+- (iOSGestalt *)gestalt
+{
+	if (__gestalt == nil) {
+		__gestalt = [[iOSGestalt alloc] init];
+	}
+
+	return __gestalt;
 }
 
 
@@ -197,8 +213,7 @@ enum {
 
 - (void)resetInfo
 {
-	iOSGestalt *gestalt = [[[iOSGestalt alloc] init] autorelease];
-	[gestalt resetVmstat];
+	[self.gestalt resetVmstat];
 	
 	[self.tableView reloadData];
 }
@@ -241,48 +256,48 @@ enum {
 	NSString *title = @"";
 	NSString *value = @"";
 
-	iOSGestalt *gestalt = [[[iOSGestalt alloc] init] autorelease];
+	unsigned int pageSize = [self.gestalt pageSize];
 
 	switch (index) {
 
 		case kSectionMemoryInfoPageSize:
 			title = @"Page Size";
-			value = [NSString stringWithFormat:@"%u", [gestalt pageSize]];
+			value = [NSString stringWithFormat:@"%u", pageSize];
 			break;
 
 		case kSectionMemoryInfoTotal:
 			title = @"Total";
-			value = [NSString stringWithFormat:@"%u", [gestalt vmstatTotal]];
+			value = [AppUtils stringWithBytes:[self.gestalt vmstatTotal] * pageSize];
 			break;
 
 		case kSectionMemoryInfoWired:
 			title = @"Wired";
-			value = [NSString stringWithFormat:@"%u", [gestalt vmstatWired]];
+			value = [AppUtils stringWithBytes:[self.gestalt vmstatWired] * pageSize];
 			break;
 
 		case kSectionMemoryInfoActive:
 			title = @"Active";
-			value = [NSString stringWithFormat:@"%u", [gestalt vmstatActive]];
+			value = [AppUtils stringWithBytes:[self.gestalt vmstatActive] * pageSize];
 			break;
 
 		case kSectionMemoryInfoInactive:
 			title = @"Inactive";
-			value = [NSString stringWithFormat:@"%u", [gestalt vmstatInactive]];
+			value = [AppUtils stringWithBytes:[self.gestalt vmstatInactive] * pageSize];
 			break;
 
 		case kSectionMemoryInfoFree:
 			title = @"Free";
-			value = [NSString stringWithFormat:@"%u", [gestalt vmstatFree]];
+			value = [AppUtils stringWithBytes:[self.gestalt vmstatFree] * pageSize];
 			break;
 
 		case kSectionMemoryInfoPhysicalMemory:
 			title = @"Physical Memory";
-			value = [NSString stringWithFormat:@"%u", [gestalt physicalMemory]];
+			value = [AppUtils stringWithBytes:[self.gestalt physicalMemory]];
 			break;
 
 		case kSectionMemoryInfoUserMemory:
 			title = @"User Memory";
-			value = [NSString stringWithFormat:@"%u", [gestalt userMemory]];
+			value = [AppUtils stringWithBytes:[self.gestalt userMemory]];
 			break;
 
 		default:
