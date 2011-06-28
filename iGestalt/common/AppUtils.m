@@ -15,17 +15,29 @@
 {
 	unsigned int kb = bytes >> 10;
 	if (kb < 10) {
-		return [NSString stringWithFormat:@"%u B", bytes];
+        if (kb == 0) {
+            return [NSString stringWithFormat:@"%u B", bytes];
+        } else {
+            return [NSString stringWithFormat:@"%u,%u B", kb, bytes - (kb << 10)];
+        }
 	}
 
 	unsigned int mb = kb >> 10;
 	if (mb < 10) {
-		return [NSString stringWithFormat:@"%u KB", kb];
+        if (mb == 0) {
+            return [NSString stringWithFormat:@"%u KB", kb];
+        } else {
+            return [NSString stringWithFormat:@"%u,%u KB", mb, kb - (mb << 10)];
+        }
 	}
 
 	unsigned int gb = mb >> 10;
 	if (gb < 10) {
-		return [NSString stringWithFormat:@"%u MB", mb];
+        if (gb == 0) {
+            return [NSString stringWithFormat:@"%u MB", mb];
+        } else {
+            return [NSString stringWithFormat:@"%u,%u MB", gb, mb - (gb << 10)];
+        }
 	}
 
 	return [NSString stringWithFormat:@"%u GB", gb];

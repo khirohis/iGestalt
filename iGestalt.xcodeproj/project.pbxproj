@@ -28,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A1784AE13B981B600126FEE /* OSMemoryNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSMemoryNotification.h; sourceTree = "<group>"; };
 		8A4D47A913AAEEF800D02590 /* GroupSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupSelectViewController.h; sourceTree = "<group>"; };
 		8A4D47AA13AAEEF800D02590 /* GroupSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupSelectViewController.m; sourceTree = "<group>"; };
 		8A4D47AB13AAEEF800D02590 /* GroupSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupSelectViewController.xib; sourceTree = "<group>"; };
@@ -160,6 +161,7 @@
 				A1B5480F13ABC04E007ABE06 /* MemoryDetailViewController.xib */,
 				A12B85D913B0D9B200ED8C67 /* AppUtils.h */,
 				A12B85DA13B0D9B200ED8C67 /* AppUtils.m */,
+				8A1784AE13B981B600126FEE /* OSMemoryNotification.h */,
 			);
 			path = common;
 			sourceTree = "<group>";
