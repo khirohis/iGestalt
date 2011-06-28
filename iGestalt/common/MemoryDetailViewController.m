@@ -9,6 +9,7 @@
 #import "MemoryDetailViewController.h"
 #import "iOSGestalt.h"
 #import "AppUtils.h"
+#import "OSMemoryNotification.h"
 
 
 enum {
@@ -88,7 +89,7 @@ enum {
 {
     [super didReceiveMemoryWarning];
 
-	NSLog(@"didReceiveMemoryWarning");
+	NSLog(@"didReceiveMemoryWarning: Notification Level %d", OSMemoryNotificationCurrentLevel());
 }
 
 
