@@ -13,34 +13,34 @@
 
 + (NSString *)stringWithBytes:(unsigned int)bytes
 {
-	unsigned int kb = bytes >> 10;
-	if (kb < 10) {
-        if (kb == 0) {
+    if (bytes < 10000) {
+        if (bytes < 1000) {
             return [NSString stringWithFormat:@"%u B", bytes];
         } else {
-            return [NSString stringWithFormat:@"%u,%03u B", kb, bytes - (kb << 10)];
+            return [NSString stringWithFormat:@"%u,%03u B", bytes / 1000, bytes % 1000];
         }
-	}
+    }
 
-	unsigned int mb = kb >> 10;
-	if (mb < 10) {
-        if (mb == 0) {
-            return [NSString stringWithFormat:@"%u KB", kb];
+    bytes >>= 10;
+    if (bytes < 10000) {
+        if (bytes < 1000) {
+            return [NSString stringWithFormat:@"%u KB", bytes];
         } else {
-            return [NSString stringWithFormat:@"%u,%03u KB", mb, kb - (mb << 10)];
+            return [NSString stringWithFormat:@"%u,%03u KB", bytes / 1000, bytes % 1000];
         }
-	}
+    }
 
-	unsigned int gb = mb >> 10;
-	if (gb < 10) {
-        if (gb == 0) {
-            return [NSString stringWithFormat:@"%u MB", mb];
+    bytes >>= 10;
+    if (bytes < 10000) {
+        if (bytes < 1000) {
+            return [NSString stringWithFormat:@"%u MB", bytes];
         } else {
-            return [NSString stringWithFormat:@"%u,%03u MB", gb, mb - (gb << 10)];
+            return [NSString stringWithFormat:@"%u,%03u MB", bytes / 1000, bytes % 1000];
         }
-	}
+    }
 
-	return [NSString stringWithFormat:@"%u GB", gb];
+    bytes >>= 10;
+	return [NSString stringWithFormat:@"%u GB", bytes];
 }
 
 @end
